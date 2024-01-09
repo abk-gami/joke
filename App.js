@@ -16,7 +16,7 @@ export default function App() {
       // console.log(data)
       setJoke( data.setup );
       setPunchline(data.punchline)
-      setLoading('Get Joke.')
+      setLoading('Get Joke')
   } catch (error) {
     alert('There is an error:' + error);
     // console.error(error)
