@@ -28,7 +28,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text>{joke}</Text>
-      <Button title='Get Joke' onPress={() => getJoke}/>
+      <Button title='Get Joke' onPress={getJoke}/>
     </View>
   );
 }
