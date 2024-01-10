@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View, Button, ImageBackground } from 'react-native';
 import React, {useState} from 'react';
+import { LinearGradient } from 'expo-linear-gradient';
 
 export default function App() {
  
@@ -23,9 +24,10 @@ export default function App() {
   }
 }
   return (
+
     <View style={styles.container}>
       <Text>{joke}</Text>
-      <Text>{punchline}</Text>
+      <Text>"....{punchline} "</Text>
       <Button title={loading} onPress={getJoke}/>
     </View>
   );
