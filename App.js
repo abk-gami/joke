@@ -25,10 +25,20 @@ export default function App() {
 }
   return (
 
-    <View style={styles.container}>
+    <View 
+    style={styles.container}
+    >
+       <LinearGradient
+        // Background Linear Gradient
+        colors={['green', 'blue']}
+        style={styles.linear}
+      >
+        
       <Text>{joke}</Text>
       <Text>"....{punchline} "</Text>
       <Button title={loading} onPress={getJoke}/>
+        
+         </LinearGradient>
     </View>
   );
 }
@@ -36,8 +46,11 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    // backgroundColor: '#fff',
+  },
+  linear: {
+    flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-  },
+  }
 });
