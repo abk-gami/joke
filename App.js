@@ -13,7 +13,7 @@ export default function App() {
   const getJoke = async () => {
     try {
       setColor('#4e204d')
-      setWidth('55%')
+      setWidth('60%')
       setLoading('Generating Joke...')
       let response = await fetch('https://official-joke-api.appspot.com/random_joke');
       let data = await response.json();
@@ -29,7 +29,6 @@ export default function App() {
   }
 }
 return (
-  
     <View 
     style={styles.container}
     >
