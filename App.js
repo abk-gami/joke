@@ -1,14 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, Button, TouchableOpacity } from 'react-native';
 import React, {useState} from 'react';
 import { LinearGradient } from 'expo-linear-gradient';
 
 export default function App() {
- 
   const [joke, setJoke] = useState('')
   const [punchline, setPunchline] = useState('')
   const [loading, setLoading] = useState('Get Joke')
-
+  
   const getJoke = async () => {
     try {
       setLoading('Generating Joke...')
@@ -23,8 +22,8 @@ export default function App() {
     // console.error(error)
   }
 }
-  return (
-
+return (
+  
     <View 
     style={styles.container}
     >
@@ -36,7 +35,12 @@ export default function App() {
         <View style={styles.whiteSpace}>
       <Text style={styles.joke}>{joke}</Text>
       <Text style={styles.punchline}>"....{punchline} "</Text>
-      <Button title={loading} onPress={getJoke}/>
+      {/* <Button title={loading} onPress={getJoke}/> */}
+      <TouchableOpacity>
+        <View>
+          <Text> Get Joke</Text>
+        </View>
+      </TouchableOpacity>
         </View>
         
          </LinearGradient>
@@ -61,9 +65,13 @@ const styles = StyleSheet.create({
     width:"85%",
   },
   joke: {
-    fontWeight: '900'
+    fontWeight: '900',
+    fontSize: 21,
   },
   punchline: {
-    fontWeight: '500'
+    fontWeight: '600',
+    fontSize: 17,
+    fontStyle: 'italic',
+    marginTop: 25,
   }
 });
