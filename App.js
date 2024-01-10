@@ -30,12 +30,12 @@ export default function App() {
     >
        <LinearGradient
         // Background Linear Gradient
-        colors={['green', 'blue']}
+        colors={['#970d1a', '#4e204d']}
         style={styles.linear}
       >
         <View style={styles.whiteSpace}>
-      <Text >{joke}</Text>
-      <Text>"....{punchline} "</Text>
+      <Text style={styles.joke}>{joke}</Text>
+      <Text style={styles.punchline}>"....{punchline} "</Text>
       <Button title={loading} onPress={getJoke}/>
         </View>
         
@@ -56,9 +56,14 @@ const styles = StyleSheet.create({
   },
   whiteSpace: {
     backgroundColor: 'white',
-    padding: 20,
+    padding: 25,
     borderRadius: 15,
-    width:"80%",
-    
+    width:"85%",
+  },
+  joke: {
+    fontWeight: '900'
+  },
+  punchline: {
+    fontWeight: '500'
   }
 });
