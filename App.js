@@ -33,10 +33,11 @@ export default function App() {
         colors={['green', 'blue']}
         style={styles.linear}
       >
-        
-      <Text>{joke}</Text>
+        <View style={styles.whiteSpace}>
+      <Text >{joke}</Text>
       <Text>"....{punchline} "</Text>
       <Button title={loading} onPress={getJoke}/>
+        </View>
         
          </LinearGradient>
     </View>
@@ -52,5 +53,12 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  whiteSpace: {
+    backgroundColor: 'white',
+    padding: 20,
+    borderRadius: 15,
+    width:"80%",
+    
   }
 });
