@@ -36,9 +36,9 @@ return (
       <Text style={styles.joke}>{joke}</Text>
       <Text style={styles.punchline}>"....{punchline} "</Text>
       {/* <Button title={loading} onPress={getJoke}/> */}
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button}  onPress={getJoke}>
         <View>
-          <Text> Get Joke</Text>
+          <Text style={styles.buttonText}>{loading}</Text>
         </View>
       </TouchableOpacity>
         </View>
@@ -76,6 +76,14 @@ const styles = StyleSheet.create({
   },
   button: {
     backgroundColor: '#970d1a',
-    padding: 15,
+    padding: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '40%'
+  },
+  buttonText: {
+    color: 'white',
+    fontWeight: 'bold',
+    fontFamily: 'sans-serif',
   }
 });
