@@ -7,16 +7,22 @@ export default function App() {
   const [joke, setJoke] = useState('')
   const [punchline, setPunchline] = useState('')
   const [loading, setLoading] = useState('Get Joke')
+  const [color, setColor] = useState('#970d1a')
+  const [width, setWidth] = useState('45%')
   
   const getJoke = async () => {
     try {
+      setColor('#4e204d')
+      setWidth('55%')
       setLoading('Generating Joke...')
       let response = await fetch('https://official-joke-api.appspot.com/random_joke');
       let data = await response.json();
       // console.log(data)
       setJoke( data.setup );
-      setPunchline(data.punchline)
-      setLoading('Get Joke')
+      setPunchline(data.punchline);
+      setLoading(loading);
+      setColor(color);
+      setWidth(width)
   } catch (error) {
     alert('There is an error:' + error);
     // console.error(error)
@@ -33,12 +39,15 @@ return (
         style={styles.linear}
       >
         <View style={styles.whiteSpace}>
+
+          <Text style={styles.heading}>HIGH IQ HUMOR</Text>
+      <View style={styles.line}></View>
       <Text style={styles.joke}>{joke}</Text>
       <Text style={styles.punchline}>"....{punchline} "</Text>
       {/* <Button title={loading} onPress={getJoke}/> */}
 
       <View style={styles.line}></View>
-      <TouchableOpacity style={styles.button}  onPress={getJoke}>
+      <TouchableOpacity style={[styles.button,{ backgroundColor: color, width: width}]}  onPress={getJoke}>
         <View>
           <Text style={styles.buttonText}>{loading}</Text>
         </View>
@@ -67,17 +76,19 @@ const styles = StyleSheet.create({
     width:"85%",
   },
   joke: {
-    fontWeight: '900',
+    fontWeight: '700',
     fontSize: 21,
+    marginTop: 15
   },
   punchline: {
     fontWeight: '600',
     fontSize: 17,
     fontStyle: 'italic',
     marginTop: 25,
+    marginBottom: 10,
   },
   button: {
-    backgroundColor: '#970d1a',
+    // backgroundColor: '#970d1a',
     padding: 10,
     alignItems: 'center',
     justifyContent: 'center',
@@ -93,8 +104,15 @@ const styles = StyleSheet.create({
     fontSize: 15,
   },
   line: {
-    backgroundColor: '#cec8c8',
+    backgroundColor: '#4e204d',
     height: 1,
     borderRadius: 100,
+    opacity: 0.2,
+  },
+  heading: {
+    fontWeight: 'bold',
+    fontSize: 25,
+    marginBottom: 15,
+    alignSelf: 'center'
   }
 });
