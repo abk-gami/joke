@@ -61,7 +61,7 @@ return (
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // backgroundColor: '#fff',
+    // backgroundColor: '#f4f455',
   },
   linear: {
     flex: 1,
