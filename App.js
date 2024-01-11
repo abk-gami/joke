@@ -47,7 +47,9 @@ return (
       {/* <Button title={loading} onPress={getJoke}/> */}
 
       <View style={styles.line}></View>
-      <TouchableOpacity style={[styles.button,{ backgroundColor: color, width: width}]}  onPress={getJoke}>
+      <TouchableOpacity 
+      style={[styles.button,{ backgroundColor: color, width: width}]}  
+      onPress={getJoke}>
         <View>
           <Text style={styles.buttonText}>{loading}</Text>
         </View>
