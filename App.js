@@ -32,6 +32,7 @@ return (
     <View 
     style={styles.container}
     >
+      <StatusBar style='light-content'/>
        <LinearGradient
         // Background Linear Gradient
         colors={['#970d1a', '#4e204d']}
