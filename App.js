@@ -38,7 +38,7 @@ return (
         colors={['#970d1a', '#4e204d']}
         style={styles.linear}
       >
-        <View style={styles.whiteSpace}>
+        <View style={styles.whiteSpace}>  
 
           <Text style={styles.heading}>HIGH IQ HUMOR</Text>
       <View style={styles.line}></View>
