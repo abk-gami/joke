@@ -49,7 +49,7 @@ return (
       <View style={styles.line}></View>
       <TouchableOpacity 
       style={[styles.button,{ backgroundColor: color, width: width}]}  
-      onPress={getJoke}
+      onPress={getJoke} 
       >
         <View>
           <Text style={styles.buttonText}>{loading}</Text>
