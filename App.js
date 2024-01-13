@@ -18,7 +18,7 @@ export default function App() {
       let response = await fetch('https://official-joke-api.appspot.com/random_joke');
       let data = await response.json();
       // console.log(data)
-      setJoke( data.setup );
+      setJoke( data.setup ); 
       setPunchline(data.punchline);
       setLoading(loading);
       setColor(color);
