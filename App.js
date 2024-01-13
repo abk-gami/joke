@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button, TouchableOpacity } from 'react-native';
 import React, {useState} from 'react';
 import { LinearGradient } from 'expo-linear-gradient';
-
+ 
 export default function App() {
   const [joke, setJoke] = useState('')
   const [punchline, setPunchline] = useState('')
