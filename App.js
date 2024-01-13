@@ -36,7 +36,7 @@ return (
        <LinearGradient
         // Background Linear Gradient
         colors={['#970d1a', '#4e204d']}
-        style={styles.linear}
+        style={styles.linear} 
       >
         <View style={styles.whiteSpace}>  
 
