@@ -10,7 +10,7 @@ export default function App() {
   const [color, setColor] = useState('#970d1a')
   const [width, setWidth] = useState('45%')
    
-  const getJoke = async () => {
+  const getJoke = async () => { 
     try {
       setColor('#4e204d')
       setWidth('60%')
